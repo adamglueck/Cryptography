@@ -35,7 +35,7 @@ elif command == "e":
     for i in range (0,number):
         encryptednmbr.append(nmbrkey[i]+secretnmbr[i])
     for i in range (0, number):
-        words+str(association[encryptednmbr[i]])
+        words=words+(association[encryptednmbr[i]])
     print(words)
     
     
