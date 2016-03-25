@@ -11,12 +11,14 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 """
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 association=list(associations)
-print(associations.find("z"))
 command=input("Enter e to encrypt, d to decrypt, or q to quit: ")
 if command !="e" and command !="d" and command!="q":
     print("Did not understand command, try again.")
 elif command == "e":
+    words=""
     secretnmbr=[]
+    nmbrkey=[]
+    encryptednmbr=[]
     secret=input("message: ")
     key=input("key: ")
     keycount=len(key)
@@ -24,11 +26,23 @@ elif command == "e":
     secret=list(secret)
     for i in range (0,number):
         secretnmbr.append(associations.find(secret[i]))
-    =number/keycount
-    print(secretnmbr)
+    multiply=int(1+(number/keycount))
+    key=(key*multiply)
+    keycount=len(key)
+    key=list(key)
+    for i in range (0,keycount):
+        nmbrkey.append(associations.find(key[i]))
+    for i in range (0,number):
+        encryptednmbr.append(nmbrkey[i]+secretnmbr[i])
+    for i in range (0, number):
+        words+str(association[encryptednmbr[i]])
+    print(words)
+    
+    
+
 elif command == "d":
     secret=input("message: ")
     key=input("key: ")
 elif command == "q":
     print("Goodbye!")
-print(associations.find("e"))
+
