@@ -27,14 +27,15 @@ elif command == "e":
     for i in range (0,number):
         secretnmbr.append(associations.find(secret[i]))
     multiply=int(1+(number/keycount))
-    key=(key*multiply)
+    key=(key*(multiply+1))
     keycount=len(key)
     key=list(key)
     for i in range (0,keycount):
         nmbrkey.append(associations.find(key[i]))
     for i in range (0,number):
         encryptednmbr.append(nmbrkey[i]+secretnmbr[i])
-    for i in range (0, number):
+    encryptedcount=len(encryptednmbr)
+    for i in range (0, encryptedcount):
         words=words+(association[encryptednmbr[i]])
     print(words)
     
