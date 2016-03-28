@@ -41,7 +41,7 @@ while control==1:
         for i in range (0, encryptedcount):
             words=words+(association[encryptednmbr[i]])
         print(words)
-    
+        control=2
     
 
     elif command == "d":
@@ -68,6 +68,7 @@ while control==1:
         for i in range (0, encryptedcount):
             words=words+(association[encryptednmbr[i]])
         print(words)
+        control=2
     elif command == "q":
         print("Goodbye!")
         control=270
