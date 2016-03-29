@@ -12,11 +12,12 @@ See the detailed requirements at https://github.com/HHS-IntroProgramming/Cryptog
 associations = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 .,:;'\"/\\<>(){}[]-=_+?!"
 association=list(associations)
 command=input("Enter e to encrypt, d to decrypt, or q to quit: ")
-control=1
-while control==1:
+end="false"
+while end=="false":
     
     if command !="e" and command !="d" and command!="q":
         print("Did not understand command, try again.")
+        end="false"
     elif command == "e":
         words=""
         secretnmbr=[]
@@ -44,7 +45,7 @@ while control==1:
         for i in range (0, encryptedcount):
             words=words+(association[encryptednmbr[i]])
         print(words)
-        control=2
+        end="true"
     
 
     elif command == "d":
@@ -74,7 +75,7 @@ while control==1:
         for i in range (0, encryptedcount):
             words=words+(association[encryptednmbr[i]])
         print(words)
-        control=2
+        end="true"
     elif command == "q":
         print("Goodbye!")
-        control=270
+        end="true"
