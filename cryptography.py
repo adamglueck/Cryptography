@@ -29,8 +29,8 @@ while control==1:
         secret=list(secret)
         for i in range (0,number):
             secretnmbr.append(associations.find(secret[i]))
-        multiply=int(1+(number/keycount))
-        key=(key*(multiply+1))
+        while len(key)<len(secret):
+            key=key+key
         keycount=len(key)
         key=list(key)
         for i in range (0,keycount):
@@ -56,8 +56,8 @@ while control==1:
         secret=list(secret)
         for i in range (0,number):
             secretnmbr.append(associations.find(secret[i]))
-        multiply=int(1+(number/keycount))
-        key=(key*(multiply+1))
+        while len(key)<len(secret):
+            key=key+key
         keycount=len(key)
         key=list(key)
         for i in range (0,keycount):
