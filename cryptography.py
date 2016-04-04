@@ -44,7 +44,7 @@ while end=="false":
         for i in range (0, encryptedcount):
             words=words+(association[encryptednmbr[i]])
         print(words)
-        end="true"
+        end="false"
     
 
     elif command == "d":
@@ -74,7 +74,7 @@ while end=="false":
         for i in range (0, encryptedcount):
             words=words+(association[encryptednmbr[i]])
         print(words)
-        end="true"
+        end="false"
     elif command == "q":
         print("Goodbye!")
         end="true"
