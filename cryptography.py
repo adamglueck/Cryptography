@@ -22,8 +22,8 @@ while end=="false":
         secretnmbr=[]
         nmbrkey=[]
         encryptednmbr=[]
-        secret=input("message: ")
-        key=input("key: ")
+        secret=input("Message: ")
+        key=input("Key: ")
         keycount=len(key)
         number=len(secret)
         secret=list(secret)
@@ -49,8 +49,8 @@ while end=="false":
 
     elif command == "d":
         words=""
-        secret=input("message: ")
-        key=input("key: ")
+        secret=input("Message: ")
+        key=input("Key: ")
         secretnmbr=[]
         nmbrkey=[]
         encryptednmbr=[]
