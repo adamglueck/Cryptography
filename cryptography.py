@@ -41,8 +41,6 @@ while end=="false":
             else:
                 encryptednmbr.append(nmbrkey[i]+secretnmbr[i])
         encryptedcount=len(encryptednmbr)
-        print(len(encryptednmbr))
-        print(len(association))
         for i in range (0, encryptedcount):
             words=words+(association[encryptednmbr[i]])
         print(words)
