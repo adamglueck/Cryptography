@@ -36,11 +36,13 @@ while end=="false":
         for i in range (0,keycount):
             nmbrkey.append(associations.find(key[i]))
         for i in range (0,number):
-            if nmbrkey[i]+secretnmbr[i]>86:
-                encryptednmbr.append(nmbrkey[i]+secretnmbr[i]-86)
+            if nmbrkey[i]+secretnmbr[i]>85:
+                encryptednmbr.append(nmbrkey[i]+secretnmbr[i]-85)
             else:
                 encryptednmbr.append(nmbrkey[i]+secretnmbr[i])
         encryptedcount=len(encryptednmbr)
+        print(len(encryptednmbr))
+        print(len(association))
         for i in range (0, encryptedcount):
             words=words+(association[encryptednmbr[i]])
         print(words)
@@ -67,7 +69,7 @@ while end=="false":
             nmbrkey.append(associations.find(key[i]))
         for i in range (0,number):
             if secretnmbr[i]-nmbrkey[i]<0:
-                encryptednmbr.append(secretnmbr[i]-nmbrkey[i]+86)
+                encryptednmbr.append(secretnmbr[i]-nmbrkey[i]+85)
             else:
                 encryptednmbr.append(secretnmbr[i]-nmbrkey[i])
         encryptedcount=len(encryptednmbr)
